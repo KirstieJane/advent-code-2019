@@ -16,7 +16,7 @@ before_install:
 install:
   # Create a conda environment from the environment.yml file in this repository
   - conda env create -f environment.yml python=$TRAVIS_PYTHON_VERSION
-  - source activate test
+  - source activate advent-code
 script:
   # Run tests
   - python -m pytest -v
