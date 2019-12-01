@@ -56,4 +56,4 @@ def test_integration():
     df = load_module_data('day01/input.txt')
     df = calc_fuel(df)
     total_fuel = sum_fuel(df)
-    assert total_fuel == 3406432
+    assert total_fuel == 5106777
