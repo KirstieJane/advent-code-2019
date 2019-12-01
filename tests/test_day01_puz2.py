@@ -1,4 +1,4 @@
-from day01.day01_puz1 import (module_fuel_req, load_module_data,
+from day01.day01_puz2 import (module_fuel_req, load_module_data,
                                    calc_fuel, sum_fuel)
 from pandas.util.testing import assert_frame_equal, assert_series_equal
 import pandas as pd
@@ -13,16 +13,16 @@ def test_puzzle_ex_14():
 
 
 def test_puzzle_ex_1969():
-    assert module_fuel_req(1969) == 654, "Should be 654"
+    assert module_fuel_req(1969) == 966, "Should be 966"
 
 
 def test_puzzle_ex_100756():
-    assert module_fuel_req(100756) == 33583, "Should be 33583"
+    assert module_fuel_req(100756) == 50346, "Should be 50346"
 
 
 def create_test_data():
     test_df = pd.DataFrame({'mass': [12, 14, 1969, 100756],
-                            'fuel': [2, 2, 654, 33583]}, dtype='float')
+                            'fuel': [2, 2, 966, 50346]}, dtype='float')
     return test_df
 
 
@@ -47,7 +47,7 @@ def test_calc_fuel():
 
 def test_sum_fuel():
     test_df = create_test_data()
-    assert sum_fuel(test_df) == 34241, "Should be 34241"
+    assert sum_fuel(test_df) == 51316, "Should be 51316"
 
 
 def test_integration():
