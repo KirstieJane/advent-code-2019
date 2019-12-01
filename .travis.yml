@@ -15,7 +15,7 @@ before_install:
   - conda update -q conda
 install:
   # Create a conda environment from the environment.yml file in this repository
-  - conda create --yes --file environment.yml --name test python=$TRAVIS_PYTHON_VERSION
+  - conda env create -f environment.yml python=$TRAVIS_PYTHON_VERSION
   - source activate test
 script:
   # Run tests
