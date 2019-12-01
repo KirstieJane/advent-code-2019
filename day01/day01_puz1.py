@@ -66,6 +66,9 @@ def sum_fuel(df):
 
 
 if __name__ == "__main__":
+    """Load in the data, calculate how much fuel each module needs, and then
+    add it up and print the total value to the screen.
+    """
     df = load_module_data('day01_puz1/input.txt')
     df = calc_fuel(df)
     total_fuel = sum_fuel(df)
