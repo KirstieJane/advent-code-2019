@@ -1,0 +1,20 @@
+language: python
+matrix:
+  # This will launch a separate build for each Python version you add
+  include:
+    - python: 3.6
+    - python: 3.7
+before_install:
+  # Install Miniconda
+  - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+  - chmod +x miniconda.sh
+  - ./miniconda.sh -b
+  - export PATH=/home/travis/miniconda/bin:$PATH
+  - conda update --yes conda
+install:
+  # Create a conda environment from the environment.yml file in this repository
+  - conda create --yes -n test -f environment.yml python=$TRAVIS_PYTHON_VERSION
+  - source activate test
+script:
+  # Run tests
+  - python -m pytest -v
