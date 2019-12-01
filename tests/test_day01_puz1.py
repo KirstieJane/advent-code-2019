@@ -1,5 +1,5 @@
 from day01.day01_puz1 import (module_fuel_req, load_module_data,
-                                   calc_fuel, sum_fuel)
+                              calc_fuel, sum_fuel)
 from pandas.util.testing import assert_frame_equal, assert_series_equal
 import pandas as pd
 
