@@ -1,0 +1,7 @@
+name: advent-code
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - matplotlib
+  - pandas
