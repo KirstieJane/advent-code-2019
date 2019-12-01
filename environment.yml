@@ -2,6 +2,7 @@ name: advent-code
 channels:
   - conda-forge
 dependencies:
+  - codecov
   - coverage
   - flake8
   - matplotlib

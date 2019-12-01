@@ -22,3 +22,5 @@ install:
 script:
   # Run tests
   - python -m pytest -v --cov=./
+after_success:
+  - codecov
