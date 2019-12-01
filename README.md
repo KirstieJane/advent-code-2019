@@ -9,5 +9,5 @@ You can run each of the exercises via [Binder](https://mybinder.org/v2/gh/Kirsti
 | Day | Puzzle | Progress |
 | --- | ------ | -------- |
 | 1   | 1      | ✅ |
-| 1   | 2      | 🤔 |
+| 1   | 2      | ✅ |
 
