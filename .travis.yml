@@ -21,4 +21,4 @@ install:
   - conda list
 script:
   # Run tests
-  - python -m pytest -v
+  - python -m pytest -v --cov=./
