@@ -20,6 +20,11 @@ install:
   - conda activate advent-code
   - conda list
 script:
+  # Run the scripts
+  - python day01/day01_puz1.py
+  - python day01/day01_puz2.py
+  - python day02/day02_puz1.py
+  - python day02/day02_puz2.py
   # Run tests
   - python -m pytest -v --cov=./
 after_success:

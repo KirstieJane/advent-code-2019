@@ -89,5 +89,5 @@ def test_integration():
     assert noun == 33
     assert verb == 76
     assert code_list[0] == 19690720
-    puzzle_answer = noun*100 + verb
+    puzzle_answer = noun * 100 + verb
     assert puzzle_answer == 3376
