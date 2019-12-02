@@ -65,13 +65,15 @@ def test_find_noun_verb(output=7594646):
     output : int, optional
         the output of the code, the first value in the list, by default 7594646
     """
-    # Test firs by setting the values explicitly
+    # Test first by setting the values explicitly and checking you get the
+    # set output value
     code_list = load_computer_data('day02/input.txt')
     code_list = adjust_data(code_list, noun=12, verb=2)
     code_list = run_opcode(code_list)
     assert code_list[0] == output
 
-    # Next test by finding the right values
+    # Next test by finding the right values for the noun and verb when you
+    # search to match the output
     code_list = load_computer_data('day02/input.txt')
     noun, verb, code_list = find_noun_verb(code_list, output=output)
     assert noun == 12
