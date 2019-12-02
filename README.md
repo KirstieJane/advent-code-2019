@@ -2,6 +2,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KirstieJane/advent-code-2019/master?urlpath=lab)
 [![Build Status](https://travis-ci.com/KirstieJane/advent-code-2019.svg?branch=master)](https://travis-ci.com/KirstieJane/advent-code-2019)
+[![codecov](https://codecov.io/gh/KirstieJane/advent-code-2019/branch/master/graph/badge.svg)](https://codecov.io/gh/KirstieJane/advent-code-2019)
 
 *Exercises for the 2019 Advent of Code*
 
@@ -17,5 +18,6 @@ You can run each of my solutions via [Binder](https://mybinder.org/v2/gh/Kirstie
 | --- | ------ | ----------- | -------- |
 | 1   | 1      | [day01](day01/puzzle_desc.md) | ✅ |
 | 1   | 2      |             | ✅ |
-| 2   | 1      |  |  |
-| 2   | 2      |  |  |
+| 2   | 1      | [day02](day02/puzzle_desc.md) | ✅ |
+| 2   | 2      |  | ✅ |
+
