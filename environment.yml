@@ -5,8 +5,11 @@ dependencies:
   - codecov
   - coverage
   - flake8
+  - jupyterlab
   - matplotlib
+  - nb_conda_kernels
   - numpy
   - pandas
   - pytest
   - pytest-cov
+  - seaborn

@@ -20,4 +20,6 @@ You can run each of my solutions via [Binder](https://mybinder.org/v2/gh/Kirstie
 | 1   | 2      |             | ✅ |
 | 2   | 1      | [day02](day02/puzzle_desc.md) | ✅ |
 | 2   | 2      |  | ✅ |
+| 3   | 1      | [day03](day03/puzzle_desc.md) | ✅ |
+| 3   | 2      |  | ✅ |
 
