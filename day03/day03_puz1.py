@@ -2,7 +2,23 @@
 
 
 def manhatten_dist_from_str(instruction_tuple):
+    """Calculate the x + y distance to the closest point to the origin where
+    two wires cross
 
+    Parameters
+    ----------
+    instruction_tuple : tuple of str
+        tuple of two strings containing the instructions that describe the
+        paths of the two wires.
+        eg: ('R8,U5,L5,D3', 'U7,R6,D4,L4')
+
+    Returns
+    -------
+    closest_crossover: tuple of ints
+        (x, y) coordinates to closest point to origin where wires cross
+    manhatten_dist: int
+        x + y distance to closest crossover point
+    """
     # Split up the first and second instructions
     instruction_str_wire0, instruction_str_wire1 = instruction_tuple
 
@@ -50,7 +66,8 @@ def load_input_data(input_file):
 
 def wire_path_str_to_list(instruction_str):
     """Split up a string with multiple instuctions that correspond to the path
-    that the wire follows to individual horizontal and vertical paths.
+    that the wire follows to individual horizontal and vertical paths into a
+    list containing the individual steps.
 
     Parameters
     ----------
@@ -210,8 +227,6 @@ def find_min_manhatten_dist(wire_coords0, wire_coords1):
     manhatten_dist : int
         minimum manhatten distance from origin to the closest crossover point
     """
-    wire_coords0.intersection(wire_coords1)
-
     manhatten_dist_dict = {}
     for x, y in wire_coords0.intersection(wire_coords1):
         if not (x, y) == (0, 0):
