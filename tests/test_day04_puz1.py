@@ -113,6 +113,8 @@ def test_count_valid_passwords():
            "122333, 122334, 122335, 122336, 122337, 122338, 122339, " +
            "122344, 122345, 122346, 122347, 122348, 122349 " +
            "are valid passwords")
+    assert count_valid_passwords([567775, 567795]) == 5, (
+           "567777, 567778, 567779, 6567788, 567789 are valid passwords")
 
 
 def test_input_values():
