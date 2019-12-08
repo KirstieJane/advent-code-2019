@@ -102,4 +102,5 @@ if __name__ == "__main__":
     df = calc_fuel(df)
     total_fuel = sum_fuel(df)
 
+    print('\n---- Day 1, Puzzle 2 ----')
     print(f'Total fuel: {total_fuel:.0f}')

@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 
+import itertools as it
+
 
 def valid_password(password):
     """Check to see if the number provided is a 6 digit number, which has two
@@ -21,7 +23,7 @@ def valid_password(password):
     # This is going to get flipped to false at some point if
     # it fails one of the criteria
     is_valid = (six_digit(password)
-                and two_adj_dig_identical(password)
+                and exactly_two_adj_dig_identical(password)
                 and ascending_digits(password))
 
     return is_valid
@@ -48,8 +50,9 @@ def six_digit(password):
         return False
 
 
-def two_adj_dig_identical(password):
-    """Check to see if two adjacent digits in the password are the same
+def exactly_two_adj_dig_identical(password):
+    """Check to see if exactly two adjacent digits in the password are the
+    same
 
     Parameters
     ----------
@@ -69,9 +72,9 @@ def two_adj_dig_identical(password):
     # any adjacent values that are the same
     adj_dig_same = False
 
-    # Loop through the digits and the ones just after them
-    for a, b in zip(password_list, password_list[1:]):
-        if a == b:
+    # Loop through the digits, the one just after them, and the one after that
+    for digit, group in it.groupby(password_list):
+        if len(list(group)) == 2:
             adj_dig_same = True
 
     return adj_dig_same
@@ -162,6 +165,6 @@ if __name__ == "__main__":
     input_values = read_in_range('day04/input.txt')
     n_valid = count_valid_passwords(input_values)
 
-    print('\n---- Day 4, Puzzle 1 ----')
+    print('\n---- Day 4, Puzzle 2 ----')
     print(f'Number of valid passwords between {input_values[0]} '
           f'and {input_values[1]+1}: {n_valid}')

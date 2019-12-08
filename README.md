@@ -22,4 +22,5 @@ You can run each of my solutions via [Binder](https://mybinder.org/v2/gh/Kirstie
 | 2   | 2      |  | ✅ |
 | 3   | 1      | [day03](day03/puzzle_desc.md) | ✅ |
 | 3   | 2      |  | ✅ |
-
+| 4   | 1      | [day04](day04/puzzle_desc.md) | ✅ |
+| 4   | 2      |  | ✅ |

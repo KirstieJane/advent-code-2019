@@ -248,5 +248,7 @@ if __name__ == "__main__":
     instruction_tuple = load_input_data('day03/input.txt')
     (closest_crossover,
      manhatten_dist) = manhatten_dist_from_str(instruction_tuple)
+
+    print('\n---- Day 3, Puzzle 1 ----')
     print(f'Minimum manhatten distance of: {manhatten_dist} ' +
           f'at cross over point {closest_crossover}')
