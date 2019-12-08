@@ -21,10 +21,7 @@ install:
   - conda list
 script:
   # Run the scripts
-  - python day01/day01_puz1.py
-  - python day01/day01_puz2.py
-  - python day02/day02_puz1.py
-  - python day02/day02_puz2.py
+  - for puz in `ls -d day??/day??_puz?.py`; do python ${puz}; done
   # Run tests
   - python -m pytest -v --cov=./
 after_success:

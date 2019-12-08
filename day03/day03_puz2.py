@@ -275,5 +275,7 @@ if __name__ == "__main__":
      fewest_steps0,
      fewest_steps1) = get_fewest_steps_to_intersec(instruction_tuple)
     fewest_steps_tot = fewest_steps0 + fewest_steps1
+
+    print('\n---- Day 3, Puzzle 2 ----')
     print(f'Fewest combined steps: {fewest_steps_tot} ' +
           f'at cross over point {fewest_crossover}')
