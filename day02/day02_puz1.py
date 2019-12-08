@@ -86,4 +86,6 @@ if __name__ == "__main__":
     code_list = load_computer_data('day02/input.txt')
     code_list = adjust_data(code_list)
     code_list = run_opcode(code_list)
+
+    print('\n---- Day 2, Puzzle 1 ----')
     print(f'Value at position 0: {code_list[0]}')

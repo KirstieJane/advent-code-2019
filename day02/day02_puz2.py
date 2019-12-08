@@ -109,6 +109,8 @@ if __name__ == "__main__":
     """
     code_list = load_computer_data('day02/input.txt')
     noun, verb, code_list = find_noun_verb(code_list, output=19690720)
+
+    print('\n---- Day 2, Puzzle 2 ----')
     print(
         f'For output: {code_list[0]}\n'
         f'  Noun: {noun}\n'

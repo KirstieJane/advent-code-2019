@@ -161,5 +161,7 @@ if __name__ == "__main__":
     """
     input_values = read_in_range('day04/input.txt')
     n_valid = count_valid_passwords(input_values)
+
+    print('\n---- Day 4, Puzzle 1 ----')
     print(f'Number of valid passwords between {input_values[0]} '
           f'and {input_values[1]+1}: {n_valid}')
