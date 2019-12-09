@@ -440,7 +440,7 @@ def test_apply_opcode7_position():
 
 def test_apply_opcode7_immediate():
 
-    code_list = [1107, -1, 8, 3, 4]
+    code_list = [1107, -1, 8, 0, 4]
     opcode_loc = 0
 
     # Get the opcode and parameter_mode_dict
@@ -451,13 +451,27 @@ def test_apply_opcode7_immediate():
                                          parameter_mode_dict)
 
     assert opcode == '07'
-    assert code_list == [1107, -1, 8, 1, 4]
-    assert inc_steps == 4
+    assert code_list == [1, -1, 8, 0, 4]
+    assert inc_steps == 0
+
+
+def test_apply_opcode7_exception():
+
+    code_list = [10007, 4, 4, 2, 0]
+    opcode_loc = 0
+
+    # Get the opcode and parameter_mode_dict
+    opcode, parameter_mode_dict = parse_opcode(code_list[opcode_loc])
+
+    with pytest.raises(ForbiddenValueError):
+        code_list, inc_steps = apply_opcode7(code_list,
+                                             opcode_loc,
+                                             parameter_mode_dict)
 
 
 def test_apply_opcode8_position():
 
-    code_list = [8, 4, 4, 2, 0]
+    code_list = [8, 4, 4, 0, 0]
     opcode_loc = 0
 
     # Get the opcode and parameter_mode_dict
@@ -468,8 +482,8 @@ def test_apply_opcode8_position():
                                          parameter_mode_dict)
 
     assert opcode == '08'
-    assert code_list == [8, 4, 1, 2, 0]
-    assert inc_steps == 4
+    assert code_list == [1, 4, 4, 0, 0]
+    assert inc_steps == 0
 
 
 def test_apply_opcode8_immediate():
@@ -487,6 +501,20 @@ def test_apply_opcode8_immediate():
     assert opcode == '08'
     assert code_list == [1108, -1, 8, 0, 4]
     assert inc_steps == 4
+
+
+def test_apply_opcode8_exception():
+
+    code_list = [11108, 4, 4, 2, 0]
+    opcode_loc = 0
+
+    # Get the opcode and parameter_mode_dict
+    opcode, parameter_mode_dict = parse_opcode(code_list[opcode_loc])
+
+    with pytest.raises(ForbiddenValueError):
+        code_list, inc_steps = apply_opcode8(code_list,
+                                             opcode_loc,
+                                             parameter_mode_dict)
 
 
 def test_load_computer_data():
