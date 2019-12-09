@@ -14,6 +14,20 @@ So the solutions are probably overengineered, but they're really valuable learni
 
 You can run each of my solutions via [Binder](https://mybinder.org/v2/gh/KirstieJane/advent-code-2019/master?urlpath=lab).
 
+You should be able to test all the code in the terminal by typing:
+
+```
+python -m pytest --cov -v
+```
+
+And you can run all the code by typing:
+
+```
+for puz in `ls -d day??/day??_puz?.py`; do python ${puz}; done
+```
+
+### Progress
+
 | Day | Puzzle | Description | Progress |
 | --- | ------ | ----------- | -------- |
 | 1   | 1      | [day01](day01/puzzle_desc.md) | ✅ |
@@ -24,3 +38,5 @@ You can run each of my solutions via [Binder](https://mybinder.org/v2/gh/Kirstie
 | 3   | 2      |  | ✅ |
 | 4   | 1      | [day04](day04/puzzle_desc.md) | ✅ |
 | 4   | 2      |  | ✅ |
+| 5   | 1      | [day05](day05/puzzle_desc.md) | ✅ |
+| 5   | 2      |  | ✅ |
