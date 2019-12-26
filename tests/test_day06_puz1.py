@@ -70,10 +70,11 @@ def test_calc_orbits(input_file):
     assert n_orbit_dict['L'] == (1, 6)
 
 
-# def test_integration():
-#     """I know the correct answer, lets check that the code gives me it!
-#     """
-#     orbit_dict = load_orbit_data('day06/input.txt')
-#     n_direct, n_indirect = calc_orbits(orbit_dict)
-#     n_total = n_direct + n_indirect
-#     assert n_total == 7161591
+def test_integration():
+    """I know the correct answer, lets check that the code gives me it!
+    """
+    orbit_dict = load_orbit_data('day06/input.txt')
+    n_orbit_dict = build_n_orbit_dict(orbit_dict)
+    n_direct_tot, n_indirect_tot = calc_tot_orbits(n_orbit_dict)
+    n_total = n_direct_tot + n_indirect_tot
+    assert n_total == 358244
