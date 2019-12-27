@@ -8,8 +8,13 @@ def load_orbit_data(fname):
     ----------
     fname : string
         File provided by advent of code competition
-    """
 
+    Returns
+    -------
+    orbit_dict : dictionary
+        A dictionary where each key is a moon object in the system, and the
+        value is the sun object (the thing it orbits).
+    """
     # Create empty orbit dictionary
     orbit_dict = {}
 
@@ -23,9 +28,21 @@ def load_orbit_data(fname):
 
 
 def build_n_orbit_dict(orbit_dict):
+    """[summary]
 
-    # Loop over the objects in the orbit_dict
+    Parameters
+    ----------
+    orbit_dict : dictionary
+        A dictionary where each key is a moon object in the system, and the
+        value is the sun object (the thing it orbits).
 
+    Returns
+    -------
+    n_orbit_dict : dictionary
+        A dictionary where each key is an object in the system and each value
+        is a tuple of 2 values. The first represents the number of direct
+        orbits and the second the number of indirect orbits.
+    """
     # Start with an empty n_orbit_dict
     n_orbit_dict = {}
 
@@ -40,7 +57,13 @@ def build_n_orbit_dict(orbit_dict):
     # indirect orbits.
     for obj_sun in orbit_dict.keys():
         n_orbits = 0
+        # Save the original obj_sun so we can write this as the
+        # key of n_orbit_dict
         orig_obj = str(obj_sun)
+
+        # Keep getting the object that this object orbits until the objec
+        # isn't in the dictionary and returns None. Increase the number of
+        # orbits each time.
         while orbit_dict.get(obj_sun) is not None:
             obj_sun = orbit_dict.get(obj_sun)
             n_orbits += 1
@@ -50,6 +73,23 @@ def build_n_orbit_dict(orbit_dict):
 
 
 def calc_tot_orbits(n_orbit_dict):
+    """Calculate the total number of direct and indirect orbits in
+    n_orbit_dict.
+
+    Parameters
+    ----------
+    n_orbit_dict : dictionary
+        A dictionary where each key is an object in the system and each value
+        is a tuple of 2 values. The first represents the number of direct
+        orbits and the second the number of indirect orbits.
+
+    Returns
+    -------
+    n_direct_tot : int
+        The number of direct orbits
+    n_indirect_tot : int
+        The number of indirect orbits
+    """
 
     n_direct_tot = sum([n_orbits[0] for n_orbits in n_orbit_dict.values()])
     n_indirect_tot = sum([n_orbits[1] for n_orbits in n_orbit_dict.values()])

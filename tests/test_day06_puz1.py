@@ -38,7 +38,8 @@ def test_load_orbit_data(input_file):
 
 
 @pytest.mark.parametrize('input_file', ['tests/test_day06_input.txt',
-                                        'tests/test_day06_input_shuffled.txt'])
+                                        'tests/test_day06_input_shuffled.txt',
+                                        'tests/test_day06_input2.txt'])
 def test_calc_orbits(input_file):
 
     test_orbit_dict = load_orbit_data(input_file)
