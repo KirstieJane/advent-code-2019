@@ -42,5 +42,5 @@ for puz in `ls -d day??/day??_puz?.py`; do python ${puz}; done
 | 5   | 2      |  | ✅ |
 | 6   | 1      | [day06](day06/puzzle_desc.md) | ✅ |
 | 6   | 2      |  | ✅ |
-| 7   | 1      | [day07](day07/puzzle_desc.md) | |
+| 7   | 1      | [day07](day07/puzzle_desc.md) | ✅ |
 | 7   | 2      |  |  |
